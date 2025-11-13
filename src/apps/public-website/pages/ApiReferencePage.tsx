@@ -1,5 +1,6 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 
 /**
  * API Reference Page - Brutalist Design
@@ -200,6 +201,8 @@ console.log(data);
           </button>
         </div>
       </section>
+
+      <Footer />
     </div>
   );
 };

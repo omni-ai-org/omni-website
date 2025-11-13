@@ -1,5 +1,6 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 
 /**
  * Features Page - Brutalist Design
@@ -155,6 +156,8 @@ export const FeaturesPage: React.FC = () => {
           </button>
         </div>
       </section>
+
+      <Footer />
     </div>
   );
 };

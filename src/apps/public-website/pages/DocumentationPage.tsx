@@ -1,5 +1,6 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 
 /**
  * Documentation Page - Brutalist Design
@@ -154,6 +155,8 @@ nexus connect slack`}</pre>
           </div>
         </div>
       </section>
+
+      <Footer />
     </div>
   );
 };

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 
 /**
  * Public Website - Home Page (Brutalist Design)
@@ -73,30 +74,120 @@ export const HomePage: React.FC = () => {
             {[
               {
                 icon: '[01]',
-                title: 'AI Standup Report',
-                desc: "Auto-generate what's done & what's next. No more manual updates.",
+                title: 'AI Co-pilot',
+                desc: 'Chat with AI to draft standups, replan sprints, and get smart suggestions.',
+                illustration: (
+                  <div className="relative w-full h-32 md:h-40 mb-4 overflow-hidden rounded-lg bg-gradient-to-br from-gray-50 to-gray-100">
+                    <div className="absolute inset-0 flex items-center justify-center p-4">
+                      <div className="w-full space-y-2">
+                        <div className="flex gap-2">
+                          <div className="w-6 h-6 rounded-full bg-gray-300 flex-shrink-0"></div>
+                          <div className="flex-1 space-y-1">
+                            <div className="h-2 bg-gray-300 rounded w-3/4"></div>
+                            <div className="h-2 bg-gray-200 rounded w-1/2"></div>
+                          </div>
+                        </div>
+                        <div className="flex gap-2 justify-end">
+                          <div className="flex-1 space-y-1">
+                            <div className="h-2 bg-ink/80 rounded w-3/4 ml-auto"></div>
+                            <div className="h-2 bg-ink/60 rounded w-1/2 ml-auto"></div>
+                          </div>
+                          <div className="w-6 h-6 rounded-full bg-ink flex-shrink-0"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                ),
               },
               {
                 icon: '[02]',
-                title: 'Auto Sync',
-                desc: 'Seamless integration across all your tools. One source of truth.',
+                title: 'Smart Inbox',
+                desc: 'Auto-capture tasks from Slack, GitHub, Meetings & Docs. AI keeps it organized.',
+                illustration: (
+                  <div className="relative w-full h-32 md:h-40 mb-4 overflow-hidden rounded-lg bg-gradient-to-br from-gray-50 to-gray-100">
+                    <div className="absolute inset-0 p-4 space-y-2">
+                      <div className="h-8 bg-gray-200 rounded flex items-center px-3 gap-2">
+                        <div className="w-2 h-2 rounded-full bg-amber-400"></div>
+                        <div className="h-2 bg-gray-400 rounded flex-1"></div>
+                      </div>
+                      <div className="h-8 bg-gray-200 rounded flex items-center px-3 gap-2">
+                        <div className="w-2 h-2 rounded-full bg-emerald-500"></div>
+                        <div className="h-2 bg-gray-400 rounded flex-1"></div>
+                      </div>
+                      <div className="h-8 bg-gray-200 rounded flex items-center px-3 gap-2">
+                        <div className="w-2 h-2 rounded-full bg-red-500"></div>
+                        <div className="h-2 bg-gray-400 rounded flex-1"></div>
+                      </div>
+                    </div>
+                  </div>
+                ),
               },
               {
                 icon: '[03]',
-                title: 'GitHub Native',
-                desc: 'PRs, commits, branches - all tracked automatically.',
+                title: 'Proactive Nudges',
+                desc: 'AI surfaces risks before they slip. Know what needs attention, when.',
+                illustration: (
+                  <div className="relative w-full h-32 md:h-40 mb-4 overflow-hidden rounded-lg bg-gradient-to-br from-gray-50 to-gray-100">
+                    <div className="absolute inset-0 p-4 space-y-3">
+                      <div className="bg-red-50 border border-red-200 rounded-lg p-3">
+                        <div className="flex items-center gap-2 mb-1">
+                          <span className="text-xs">⚠</span>
+                          <div className="h-2 bg-red-300 rounded w-20"></div>
+                        </div>
+                        <div className="h-1.5 bg-red-200 rounded w-full"></div>
+                      </div>
+                      <div className="bg-amber-50 border border-amber-200 rounded-lg p-3">
+                        <div className="flex items-center gap-2 mb-1">
+                          <span className="text-xs">⏱</span>
+                          <div className="h-2 bg-amber-300 rounded w-16"></div>
+                        </div>
+                        <div className="h-1.5 bg-amber-200 rounded w-3/4"></div>
+                      </div>
+                    </div>
+                  </div>
+                ),
               },
               {
                 icon: '[04]',
-                title: 'Omnipresent AI',
-                desc: 'Your AI assistant everywhere. Context-aware, always learning.',
+                title: 'Team Insights',
+                desc: 'Real-time execution metrics, workload tracking, and sprint health at a glance.',
+                illustration: (
+                  <div className="relative w-full h-32 md:h-40 mb-4 overflow-hidden rounded-lg bg-gradient-to-br from-gray-50 to-gray-100">
+                    <div className="absolute inset-0 p-4">
+                      <div className="grid grid-cols-3 gap-2 mb-3">
+                        <div className="bg-gray-200 rounded p-2 text-center">
+                          <div className="h-1.5 bg-gray-400 rounded w-8 mx-auto mb-1"></div>
+                          <div className="h-3 bg-blue-500 rounded w-10 mx-auto"></div>
+                        </div>
+                        <div className="bg-gray-200 rounded p-2 text-center">
+                          <div className="h-1.5 bg-gray-400 rounded w-8 mx-auto mb-1"></div>
+                          <div className="h-3 bg-red-500 rounded w-10 mx-auto"></div>
+                        </div>
+                        <div className="bg-gray-200 rounded p-2 text-center">
+                          <div className="h-1.5 bg-gray-400 rounded w-8 mx-auto mb-1"></div>
+                          <div className="h-3 bg-emerald-500 rounded w-10 mx-auto"></div>
+                        </div>
+                      </div>
+                      <div className="space-y-2">
+                        <div className="flex items-center gap-2">
+                          <div className="w-5 h-5 rounded-full bg-gray-300 flex-shrink-0"></div>
+                          <div className="flex-1 h-2 bg-gray-200 rounded"></div>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <div className="w-5 h-5 rounded-full bg-gray-300 flex-shrink-0"></div>
+                          <div className="flex-1 h-2 bg-gray-200 rounded"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                ),
               },
             ].map((feature, i) => (
               <div
                 key={i}
                 className={`
                   p-6 md:p-10 lg:p-12 border border-ink bg-paper relative transition-all duration-300 z-0
-                  hover:bg-ink hover:text-paper hover:z-20 md:hover:scale-105
+                  hover:bg-ink hover:text-paper hover:z-20 md:hover:scale-105 overflow-hidden
                   ${i === 0 ? 'md:border-r-0 md:border-b-0 border-b-0' : ''}
                   ${i === 1 ? 'md:border-b-0 border-b-0' : ''}
                   ${i === 2 ? 'md:border-r-0 border-b-0' : ''}
@@ -104,6 +195,7 @@ export const HomePage: React.FC = () => {
               >
                 <div className="text-2xl md:text-3xl mb-3 md:mb-4 font-mono">{feature.icon}</div>
                 <h3 className="text-xl md:text-2xl font-semibold mb-3 md:mb-4 tracking-tight">{feature.title}</h3>
+                {feature.illustration}
                 <p className="font-mono text-xs md:text-sm leading-relaxed font-light">{feature.desc}</p>
               </div>
             ))}
@@ -181,18 +273,7 @@ export const HomePage: React.FC = () => {
         </div>
       </section>
 
-      {/* Floating AI Assistant */}
-      <div className="fixed bottom-6 right-6 md:bottom-8 md:right-8 lg:bottom-12 lg:right-12 w-[50px] h-[50px] md:w-[60px] md:h-[60px] bg-ink rounded-full flex items-center justify-center cursor-pointer z-[1000] shadow-[0_4px_20px_rgba(0,0,0,0.2)] animate-float before:content-[''] before:absolute before:w-full before:h-full before:rounded-full before:border-2 before:border-paper before:animate-ripple">
-        <svg
-          className="w-[24px] h-[24px] md:w-[30px] md:h-[30px] fill-paper"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path d="M12 2L2 7L12 12L22 7L12 2Z" />
-          <path d="M2 17L12 22L22 17" />
-          <path d="M2 12L12 17L22 12" />
-        </svg>
-      </div>
+      <Footer />
     </div>
   );
 };

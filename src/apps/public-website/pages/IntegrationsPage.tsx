@@ -1,5 +1,6 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 
 /**
  * Integrations Page - Brutalist Design
@@ -149,6 +150,8 @@ POST /api/v1/work-units
           </button>
         </div>
       </section>
+
+      <Footer />
     </div>
   );
 };
