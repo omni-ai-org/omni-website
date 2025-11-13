@@ -101,36 +101,37 @@ export const FeaturesPage: React.FC = () => {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="pt-48 pb-20 px-16">
+      <section className="pt-24 md:pt-36 lg:pt-48 pb-12 md:pb-16 lg:pb-20 px-4 md:px-8 lg:px-16">
         <div className="max-w-[1400px] mx-auto">
-          <h1 className="text-[8rem] font-extralight leading-[0.9] tracking-ultra-tight mb-8">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-[8rem] font-extralight leading-[0.9] tracking-ultra-tight mb-6 md:mb-8">
             FEATURES
           </h1>
-          <p className="font-mono text-xl font-light max-w-3xl">
+          <p className="font-mono text-sm md:text-base lg:text-xl font-light max-w-3xl">
             {'// Powerful tools that eliminate administrative overhead and keep your team in flow'}
           </p>
         </div>
       </section>
 
       {/* Features Grid */}
-      <section className="py-20 px-16">
-        <div className="max-w-[1400px] mx-auto grid md:grid-cols-2 gap-0">
+      <section className="py-12 md:py-16 lg:py-20 px-4 md:px-8 lg:px-16">
+        <div className="max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-0">
           {features.map((feature, i) => (
             <div
               key={i}
               className={`
-                p-12 border border-ink bg-paper transition-all duration-300
-                hover:bg-ink hover:text-paper hover:z-10 hover:scale-[1.02]
-                ${i % 2 === 0 ? 'border-r-0' : ''}
+                p-6 md:p-10 lg:p-12 border border-ink bg-paper transition-all duration-300
+                hover:bg-ink hover:text-paper hover:z-10 md:hover:scale-[1.02]
+                ${i % 2 === 0 ? 'md:border-r-0' : ''}
                 ${i < features.length - 2 ? 'border-b-0' : ''}
+                ${i === features.length - 1 ? 'md:border-b-0' : ''}
               `}
             >
-              <div className="text-4xl mb-4 font-mono">[{feature.number}]</div>
-              <h3 className="text-3xl font-semibold mb-4 tracking-tight">{feature.title}</h3>
-              <p className="font-mono text-base leading-relaxed font-light mb-6">
+              <div className="text-2xl md:text-3xl lg:text-4xl mb-3 md:mb-4 font-mono">[{feature.number}]</div>
+              <h3 className="text-xl md:text-2xl lg:text-3xl font-semibold mb-3 md:mb-4 tracking-tight">{feature.title}</h3>
+              <p className="font-mono text-sm md:text-base leading-relaxed font-light mb-4 md:mb-6">
                 {feature.description}
               </p>
-              <ul className="font-mono text-sm space-y-2">
+              <ul className="font-mono text-xs md:text-sm space-y-1.5 md:space-y-2">
                 {feature.details.map((detail, j) => (
                   <li key={j}>● {detail}</li>
                 ))}
@@ -141,15 +142,15 @@ export const FeaturesPage: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-32 px-16 bg-ink text-paper">
+      <section className="py-16 md:py-24 lg:py-32 px-4 md:px-8 lg:px-16 bg-ink text-paper">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-5xl font-extralight tracking-tighter mb-8">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-extralight tracking-tighter mb-6 md:mb-8">
             READY TO SHIP FASTER?
           </h2>
-          <p className="font-mono text-lg mb-12">
+          <p className="font-mono text-base md:text-lg mb-8 md:mb-12">
             Start eliminating tool fragmentation today
           </p>
-          <button className="px-16 py-6 text-lg font-normal tracking-wider uppercase border-2 border-paper bg-paper text-ink cursor-pointer transition-all duration-300 hover:-translate-x-1 hover:-translate-y-1 hover:shadow-[4px_4px_0_#fafafa]">
+          <button className="w-full sm:w-auto px-10 md:px-14 lg:px-16 py-4 md:py-5 lg:py-6 text-base md:text-lg font-normal tracking-wider uppercase border-2 border-paper bg-paper text-ink cursor-pointer transition-all duration-300 hover:-translate-x-1 hover:-translate-y-1 hover:shadow-[4px_4px_0_#fafafa]">
             START FREE
           </button>
         </div>

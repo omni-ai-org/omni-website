@@ -30,9 +30,9 @@ export const Button: React.FC<ButtonProps> = ({
   };
 
   const sizeStyles = {
-    sm: 'px-6 py-2 text-sm',
-    md: 'px-12 py-5 text-base',
-    lg: 'px-16 py-6 text-lg',
+    sm: 'px-4 md:px-6 py-2 text-xs md:text-sm',
+    md: 'px-8 md:px-10 lg:px-12 py-4 md:py-5 text-sm md:text-base',
+    lg: 'px-10 md:px-14 lg:px-16 py-4 md:py-5 lg:py-6 text-base md:text-lg',
   };
 
   const widthStyles = fullWidth ? 'w-full' : '';

@@ -14,15 +14,15 @@ export const HomePage: React.FC = () => {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="min-h-screen flex flex-col justify-center px-16 relative pt-36 pb-24">
+      <section className="min-h-screen flex flex-col justify-center px-4 md:px-8 lg:px-16 relative pt-28 md:pt-32 lg:pt-36 pb-16 md:pb-20 lg:pb-24">
         <div className="max-w-[1200px] mx-auto w-full flex flex-col text-left">
-          <div className="w-full mb-6 flex justify-center opacity-0 animate-fadeIn" style={{ animationDelay: '0.4s', animationFillMode: 'forwards' }}>
-            <span className="inline-flex items-center gap-2 px-5 py-2 border border-ink rounded-full text-xs tracking-[0.3em] font-mono shadow-[0_0_20px_rgba(10,10,10,0.25)]">
+          <div className="w-full mb-3 md:mb-4 flex justify-center opacity-0 animate-fadeIn" style={{ animationDelay: '0.4s', animationFillMode: 'forwards' }}>
+            <span className="inline-flex items-center gap-2 px-4 md:px-5 py-1.5 md:py-2 border border-ink rounded-full text-xs tracking-[0.2em] md:tracking-[0.3em] font-mono shadow-[0_0_20px_rgba(10,10,10,0.25)]">
               ● COMING SOON
             </span>
           </div>
           <h1
-            className="text-hero font-extralight leading-[0.9] tracking-ultra-tight mb-8"
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-extralight leading-[0.9] tracking-ultra-tight mb-4 md:mb-6 lg:mb-8"
           >
             {['SHIP', 'FASTER.', 'THINK LESS.'].map((word, i) => (
               <React.Fragment key={word}>
@@ -41,7 +41,7 @@ export const HomePage: React.FC = () => {
           </h1>
 
           <p
-            className="font-mono text-xl font-light mb-8 opacity-0 animate-fadeIn"
+            className="font-mono text-sm md:text-base lg:text-lg xl:text-xl font-light mb-5 md:mb-6 lg:mb-8 opacity-0 animate-fadeIn"
             style={{
               animationDelay: '0.6s',
               animationFillMode: 'forwards',
@@ -52,22 +52,22 @@ export const HomePage: React.FC = () => {
           </p>
 
           <div
-            className="flex flex-wrap justify-start gap-8 mb-8 opacity-0 animate-fadeIn"
+            className="flex flex-col sm:flex-row flex-wrap justify-start gap-3 md:gap-4 lg:gap-6 mb-5 md:mb-6 lg:mb-8 opacity-0 animate-fadeIn"
             style={{ animationDelay: '0.8s', animationFillMode: 'forwards' }}
           >
-            <Link to="/platform">
-              <button className="px-12 py-5 text-base font-normal tracking-wider uppercase border-2 border-ink bg-ink text-paper cursor-pointer relative overflow-hidden transition-all duration-300 hover:-translate-x-1 hover:-translate-y-1 hover:shadow-[4px_4px_0_#2a2a2a]">
+            <Link to="/dashboard" className="w-full sm:w-auto">
+              <button className="w-full sm:w-auto px-8 md:px-10 lg:px-12 py-4 md:py-5 text-sm md:text-base font-normal tracking-wider uppercase border-2 border-ink bg-ink text-paper cursor-pointer relative overflow-hidden transition-all duration-300 hover:-translate-x-1 hover:-translate-y-1 hover:shadow-[4px_4px_0_#2a2a2a]">
                 START FREE
               </button>
             </Link>
-            <button className="px-12 py-5 text-base font-normal tracking-wider uppercase border-2 border-ink bg-transparent text-ink cursor-pointer relative overflow-hidden transition-all duration-300 hover:bg-ink hover:text-paper">
+            <button className="w-full sm:w-auto px-8 md:px-10 lg:px-12 py-4 md:py-5 text-sm md:text-base font-normal tracking-wider uppercase border-2 border-ink bg-transparent text-ink cursor-pointer relative overflow-hidden transition-all duration-300 hover:bg-ink hover:text-paper">
               SEE DEMO
             </button>
           </div>
 
           {/* Features Grid */}
           <div
-            className="mt-20 grid grid-cols-2 gap-0 max-w-[900px] w-full opacity-0 animate-fadeIn text-left"
+            className="mt-12 md:mt-16 lg:mt-20 grid grid-cols-1 md:grid-cols-2 gap-0 max-w-[900px] w-full opacity-0 animate-fadeIn text-left"
             style={{ animationDelay: '1s', animationFillMode: 'forwards' }}
           >
             {[
@@ -95,16 +95,16 @@ export const HomePage: React.FC = () => {
               <div
                 key={i}
                 className={`
-                  p-12 border border-ink bg-paper relative transition-all duration-300 z-0
-                  hover:bg-ink hover:text-paper hover:z-20 hover:scale-105
-                  ${i === 0 ? 'border-r-0 border-b-0' : ''}
-                  ${i === 1 ? 'border-b-0' : ''}
-                  ${i === 2 ? 'border-r-0' : ''}
+                  p-6 md:p-10 lg:p-12 border border-ink bg-paper relative transition-all duration-300 z-0
+                  hover:bg-ink hover:text-paper hover:z-20 md:hover:scale-105
+                  ${i === 0 ? 'md:border-r-0 md:border-b-0 border-b-0' : ''}
+                  ${i === 1 ? 'md:border-b-0 border-b-0' : ''}
+                  ${i === 2 ? 'md:border-r-0 border-b-0' : ''}
                 `}
               >
-                <div className="text-3xl mb-4 font-mono">{feature.icon}</div>
-                <h3 className="text-2xl font-semibold mb-4 tracking-tight">{feature.title}</h3>
-                <p className="font-mono text-sm leading-relaxed font-light">{feature.desc}</p>
+                <div className="text-2xl md:text-3xl mb-3 md:mb-4 font-mono">{feature.icon}</div>
+                <h3 className="text-xl md:text-2xl font-semibold mb-3 md:mb-4 tracking-tight">{feature.title}</h3>
+                <p className="font-mono text-xs md:text-sm leading-relaxed font-light">{feature.desc}</p>
               </div>
             ))}
           </div>
@@ -134,11 +134,11 @@ export const HomePage: React.FC = () => {
       </div>
 
       {/* Personas Section */}
-      <section className="py-32 px-16 bg-ink text-paper relative">
-        <h2 className="text-5xl font-extralight tracking-tighter mb-12 text-center">
+      <section className="py-16 md:py-24 lg:py-32 px-4 md:px-8 lg:px-16 bg-ink text-paper relative">
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-extralight tracking-tighter mb-8 md:mb-10 lg:mb-12 text-center">
           BUILT FOR YOUR TEAM
         </h2>
-        <div className="max-w-[1200px] mx-auto grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-8">
+        <div className="max-w-[1200px] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-8">
           {[
             {
               name: 'Product Manager',
@@ -163,15 +163,15 @@ export const HomePage: React.FC = () => {
           ].map((persona, i) => (
             <div
               key={i}
-              className="p-8 border border-paper relative overflow-hidden group cursor-pointer"
+              className="p-6 md:p-8 border border-paper relative overflow-hidden group cursor-pointer"
             >
               <div
                 className="absolute top-0 left-0 w-full h-full bg-paper -translate-x-full transition-transform duration-300 group-hover:translate-x-0 z-0"
               />
               <div className="relative z-10 group-hover:text-ink transition-colors">
-                <h3 className="text-xl font-semibold mb-4 tracking-tight">{persona.name}</h3>
+                <h3 className="text-lg md:text-xl font-semibold mb-3 md:mb-4 tracking-tight">{persona.name}</h3>
                 {persona.motivations.map((m, j) => (
-                  <p key={j} className="font-mono text-[0.85rem] leading-snug mb-2">
+                  <p key={j} className="font-mono text-xs md:text-[0.85rem] leading-snug mb-2">
                     {m}
                   </p>
                 ))}
@@ -182,9 +182,9 @@ export const HomePage: React.FC = () => {
       </section>
 
       {/* Floating AI Assistant */}
-      <div className="fixed bottom-12 right-12 w-[60px] h-[60px] bg-ink rounded-full flex items-center justify-center cursor-pointer z-[1000] shadow-[0_4px_20px_rgba(0,0,0,0.2)] animate-float before:content-[''] before:absolute before:w-full before:h-full before:rounded-full before:border-2 before:border-paper before:animate-ripple">
+      <div className="fixed bottom-6 right-6 md:bottom-8 md:right-8 lg:bottom-12 lg:right-12 w-[50px] h-[50px] md:w-[60px] md:h-[60px] bg-ink rounded-full flex items-center justify-center cursor-pointer z-[1000] shadow-[0_4px_20px_rgba(0,0,0,0.2)] animate-float before:content-[''] before:absolute before:w-full before:h-full before:rounded-full before:border-2 before:border-paper before:animate-ripple">
         <svg
-          className="w-[30px] h-[30px] fill-paper"
+          className="w-[24px] h-[24px] md:w-[30px] md:h-[30px] fill-paper"
           viewBox="0 0 24 24"
           xmlns="http://www.w3.org/2000/svg"
         >

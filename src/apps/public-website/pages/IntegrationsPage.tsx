@@ -45,20 +45,20 @@ export const IntegrationsPage: React.FC = () => {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="pt-48 pb-20 px-16">
+      <section className="pt-24 md:pt-36 lg:pt-48 pb-12 md:pb-16 lg:pb-20 px-4 md:px-8 lg:px-16">
         <div className="max-w-[1400px] mx-auto">
-          <h1 className="text-[8rem] font-extralight leading-[0.9] tracking-ultra-tight mb-8">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-[8rem] font-extralight leading-[0.9] tracking-ultra-tight mb-6 md:mb-8">
             INTEGRATIONS
           </h1>
-          <p className="font-mono text-xl font-light max-w-3xl">
+          <p className="font-mono text-sm md:text-base lg:text-xl font-light max-w-3xl">
             {'// Connect your entire development stack. One platform, infinite possibilities'}
           </p>
         </div>
       </section>
 
       {/* Integration Ticker */}
-      <div className="overflow-hidden whitespace-nowrap relative bg-ink text-paper py-4 my-20">
-        <div className="inline-block pl-full animate-ticker font-mono text-sm tracking-wider">
+      <div className="overflow-hidden whitespace-nowrap relative bg-ink text-paper py-3 md:py-4 my-12 md:my-16 lg:my-20">
+        <div className="inline-block pl-full animate-ticker font-mono text-xs md:text-sm tracking-wider">
           {[
             '● GITHUB',
             '● SLACK',
@@ -73,7 +73,7 @@ export const IntegrationsPage: React.FC = () => {
             '● DATADOG',
             '● SENTRY'
           ].map((item, i) => (
-            <span key={i} className="inline-block px-12">
+            <span key={i} className="inline-block px-8 md:px-12">
               {item}
             </span>
           ))}
@@ -81,23 +81,23 @@ export const IntegrationsPage: React.FC = () => {
       </div>
 
       {/* Integrations Grid */}
-      <section className="py-20 px-16">
+      <section className="py-12 md:py-16 lg:py-20 px-4 md:px-8 lg:px-16">
         <div className="max-w-[1400px] mx-auto">
-          <h2 className="text-5xl font-extralight tracking-tighter mb-16 text-center">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-extralight tracking-tighter mb-10 md:mb-14 lg:mb-16 text-center">
             NATIVE INTEGRATIONS
           </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-0">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-0">
             {integrations.map((category, i) => (
               <div
                 key={i}
-                className="p-8 border border-ink bg-paper transition-all duration-300 hover:bg-ink hover:text-paper"
+                className="p-6 md:p-8 border border-ink bg-paper transition-all duration-300 hover:bg-ink hover:text-paper"
               >
-                <h3 className="text-sm font-semibold tracking-wider mb-6 opacity-50">
+                <h3 className="text-xs md:text-sm font-semibold tracking-wider mb-4 md:mb-6 opacity-50">
                   {category.category}
                 </h3>
-                <ul className="space-y-3">
+                <ul className="space-y-2 md:space-y-3">
                   {category.items.map((item, j) => (
-                    <li key={j} className="font-mono text-base">
+                    <li key={j} className="font-mono text-sm md:text-base">
                       ● {item}
                     </li>
                   ))}
@@ -109,15 +109,15 @@ export const IntegrationsPage: React.FC = () => {
       </section>
 
       {/* API Section */}
-      <section className="py-32 px-16 bg-ghost">
+      <section className="py-16 md:py-24 lg:py-32 px-4 md:px-8 lg:px-16 bg-ghost">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-5xl font-extralight tracking-tighter mb-8">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-extralight tracking-tighter mb-6 md:mb-8">
             BUILD YOUR OWN
           </h2>
-          <p className="font-mono text-lg mb-8">
+          <p className="font-mono text-base md:text-lg mb-6 md:mb-8">
             Don't see your tool? Use our REST API to build custom integrations.
           </p>
-          <div className="bg-ink text-paper p-8 font-mono text-sm mb-8">
+          <div className="bg-ink text-paper p-4 md:p-6 lg:p-8 font-mono text-xs md:text-sm mb-6 md:mb-8">
             <pre className="overflow-x-auto">
 {`// Example: Create a work unit via API
 POST /api/v1/work-units
@@ -129,22 +129,22 @@ POST /api/v1/work-units
 }`}
             </pre>
           </div>
-          <button className="px-12 py-5 text-base font-normal tracking-wider uppercase border-2 border-ink bg-transparent text-ink cursor-pointer transition-all duration-300 hover:bg-ink hover:text-paper">
+          <button className="w-full sm:w-auto px-8 md:px-10 lg:px-12 py-4 md:py-5 text-sm md:text-base font-normal tracking-wider uppercase border-2 border-ink bg-transparent text-ink cursor-pointer transition-all duration-300 hover:bg-ink hover:text-paper">
             VIEW API DOCS
           </button>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-32 px-16 bg-ink text-paper">
+      <section className="py-16 md:py-24 lg:py-32 px-4 md:px-8 lg:px-16 bg-ink text-paper">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-5xl font-extralight tracking-tighter mb-8">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-extralight tracking-tighter mb-6 md:mb-8">
             CONNECT YOUR STACK
           </h2>
-          <p className="font-mono text-lg mb-12">
+          <p className="font-mono text-base md:text-lg mb-8 md:mb-12">
             Start syncing your tools in minutes
           </p>
-          <button className="px-16 py-6 text-lg font-normal tracking-wider uppercase border-2 border-paper bg-paper text-ink cursor-pointer transition-all duration-300 hover:-translate-x-1 hover:-translate-y-1 hover:shadow-[4px_4px_0_#fafafa]">
+          <button className="w-full sm:w-auto px-10 md:px-14 lg:px-16 py-4 md:py-5 lg:py-6 text-base md:text-lg font-normal tracking-wider uppercase border-2 border-paper bg-paper text-ink cursor-pointer transition-all duration-300 hover:-translate-x-1 hover:-translate-y-1 hover:shadow-[4px_4px_0_#fafafa]">
             GET STARTED
           </button>
         </div>

@@ -25,7 +25,7 @@ function App() {
         <Route path="/api-reference" element={<ApiReferencePage />} />
 
         {/* Platform Routes */}
-        <Route path="/platform" element={<DashboardPage />} />
+        <Route path="/dashboard" element={<DashboardPage />} />
 
         {/* Redirect unknown routes to home */}
         <Route path="*" element={<Navigate to="/" replace />} />

@@ -14,7 +14,7 @@ module.exports = {
         accent: '#000',
       },
       fontFamily: {
-        sans: ['Oswald', 'sans-serif'],
+        sans: ['Inter', 'sans-serif'],
         mono: ['JetBrains Mono', 'monospace'],
       },
       fontSize: {
