@@ -14,7 +14,17 @@ module.exports = {
         accent: '#000',
       },
       fontFamily: {
-        sans: ['Inter', 'sans-serif'],
+        sans: [
+          "Inter Variable",
+          "Inter",
+          "system-ui",
+          "-apple-system",
+          "SF Pro Display",
+          "Segoe UI",
+          "Roboto",
+          "Helvetica Neue",
+          "sans-serif",
+        ],
         mono: ['JetBrains Mono', 'monospace'],
       },
       fontSize: {

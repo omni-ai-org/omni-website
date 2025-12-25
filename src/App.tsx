@@ -1,36 +1,42 @@
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { ClerkProvider } from '@clerk/clerk-react';
 import HomePage from './apps/public-website/pages/HomePage';
-import FeaturesPage from './apps/public-website/pages/FeaturesPage';
-import IntegrationsPage from './apps/public-website/pages/IntegrationsPage';
-import BlogPage from './apps/public-website/pages/BlogPage';
-import DocumentationPage from './apps/public-website/pages/DocumentationPage';
-import ApiReferencePage from './apps/public-website/pages/ApiReferencePage';
-import DashboardPage from './apps/platform/pages/DashboardPage';
+
+// Get Clerk publishable key from environment
+const clerkPubKey = process.env.REACT_APP_CLERK_PUBLISHABLE_KEY || '';
 
 /**
  * Main App Component
  *
- * Handles routing between public website and platform
+ * Handles routing for the public website with Clerk authentication
  */
 function App() {
+  // If no Clerk key, show error
+  if (!clerkPubKey) {
+    return (
+      <div className="min-h-screen bg-paper flex items-center justify-center">
+        <div className="text-center p-8">
+          <h1 className="text-2xl font-bold mb-4">Configuration Error</h1>
+          <p className="font-mono text-sm">
+            Missing REACT_APP_CLERK_PUBLISHABLE_KEY in .env file.
+          </p>
+        </div>
+      </div>
+    );
+  }
+
   return (
-    <BrowserRouter>
-      <Routes>
-        {/* Public Website Routes */}
-        <Route path="/" element={<HomePage />} />
-        <Route path="/features" element={<FeaturesPage />} />
-        <Route path="/integrations" element={<IntegrationsPage />} />
-        <Route path="/blog" element={<BlogPage />} />
-        <Route path="/documentation" element={<DocumentationPage />} />
-        <Route path="/api-reference" element={<ApiReferencePage />} />
+    <ClerkProvider publishableKey={clerkPubKey}>
+      <BrowserRouter>
+        <Routes>
+          {/* Public Website Routes */}
+          <Route path="/" element={<HomePage />} />
 
-        {/* Platform Routes */}
-        <Route path="/dashboard" element={<DashboardPage />} />
-
-        {/* Redirect unknown routes to home */}
-        <Route path="*" element={<Navigate to="/" replace />} />
-      </Routes>
-    </BrowserRouter>
+          {/* Redirect unknown routes to home */}
+          <Route path="*" element={<Navigate to="/" replace />} />
+        </Routes>
+      </BrowserRouter>
+    </ClerkProvider>
   );
 }
 
