@@ -7,19 +7,19 @@
 
 export const BRANDING = {
   // Product Information
-  productName: 'Nexus AI',
-  productNameShort: 'Nexus',
-  tagline: 'Unified AI-First Productivity Platform',
-  description: 'Eliminates tool fragmentation, reduces administrative overhead, and provides contextual, self-maintaining visibility across the entire product lifecycle.',
+  productName: 'Omni AI',
+  productNameShort: 'Omni',
+  tagline: 'AI-Native Execution Intelligence for Engineering Teams',
+  description: 'Understand real progress from actual developer activity, not manual updates. Transform signals into insights automatically.',
 
   // Domain Configuration
-  domain: 'nexus.ai',
+  domain: 'omni.vachas.ai',
 
   // Contact Information
   email: {
-    support: 'support@nexus.ai',
-    hello: 'hello@nexus.ai',
-    careers: 'careers@nexus.ai',
+    support: 'support@omni.vachas.ai',
+    hello: 'hello@omni.vachas.ai',
+    careers: 'careers@omni.vachas.ai',
   },
 
   // Social Media (Optional - can be added later)
@@ -31,8 +31,8 @@ export const BRANDING = {
 
   // Legal
   company: {
-    name: 'Nexus AI Inc.',
-    fullName: 'Nexus AI, Inc.',
+    name: 'Omni AI',
+    fullName: 'Omni AI',
   },
 } as const;
 

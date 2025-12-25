@@ -1,14 +1,13 @@
-# Nexus AI Frontend
+# Omni AI Website
 
-Unified AI-First Productivity Platform - Frontend Application
+AI-Native Execution Intelligence for Engineering Teams - Public Website
 
 ## Project Structure
 
 ```
 src/
 ├── apps/
-│   ├── public-website/    # Public website (nexus.ai)
-│   └── platform/          # Main platform/product
+│   └── public-website/    # Public website (omni.vachas.ai)
 ├── shared/
 │   ├── config/            # Global configuration (branding)
 │   ├── components/        # Shared UI components
@@ -32,22 +31,26 @@ Change product name in `src/shared/config/branding.ts`:
 
 ```typescript
 export const BRANDING = {
-  productName: 'Nexus AI',
-  domain: 'nexus.ai',
+  productName: 'Omni AI',
+  domain: 'omni.vachas.ai',
   // ...
 };
 ```
 
-## Routes
+## Deployment
 
-- `/` - Public website home
-- `/platform` - Platform dashboard
+Hosted on GitHub Pages at [omni.vachas.ai](https://omni.vachas.ai)
+
+```bash
+npm run build
+# Deploy build/ folder to GitHub Pages
+```
 
 ## Design System
 
-- **Minimalistic** with generous white space
-- **Semantic colors**: red (error), green (success), yellow (warning), blue (info)
-- **Typography**: Inter (sans-serif), JetBrains Mono (monospace)
+- **Brutalist** aesthetic with high contrast
+- **Black & White** color scheme
+- **Typography**: Inter Variable, monospace accents
 - **TailwindCSS** for styling
 
 ## Scripts
@@ -58,8 +61,8 @@ export const BRANDING = {
 
 ## Tech Stack
 
-React 18 • TypeScript • React Router v6 • TailwindCSS • Create React App
+React 19 • TypeScript • React Router v7 • TailwindCSS • Clerk (Waitlist)
 
 ---
 
-**Nexus AI, Inc.** • [docs/PRODUCT-SPECIFICATION.md](./docs/PRODUCT-SPECIFICATION.md)
+**Omni AI** • [omni.vachas.ai](https://omni.vachas.ai)

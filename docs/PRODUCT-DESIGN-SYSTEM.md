@@ -1,4 +1,4 @@
-# NEXUS Design System - React + TypeScript + Tailwind CSS
+# OMNI Design System - React + TypeScript + Tailwind CSS
 
 ## Table of Contents
 1. [Core Design Principles](#core-design-principles)
