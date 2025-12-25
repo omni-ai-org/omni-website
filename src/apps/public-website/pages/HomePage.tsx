@@ -34,7 +34,7 @@ export const HomePage: React.FC = () => {
 
           {/* Tagline */}
           <p className="font-mono text-sm md:text-base text-gray-600 mb-8 max-w-xl">
-            // AI-native execution intelligence that understands real progress from actual developer activity
+            {'// AI-native execution intelligence that understands real progress from actual developer activity'}
           </p>
 
           {/* CTA Buttons */}
