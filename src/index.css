@@ -27,14 +27,14 @@
   body::before {
     content: '';
     position: fixed;
-    top: 0;
+    top: 56px;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: calc(100% - 56px);
     background-image: url('/bkg-noise.webp');
     background-repeat: repeat;
-    opacity: 0.12;
-    z-index: 9999;
+    opacity: 0.05;
+    z-index: -1;
     pointer-events: none;
   }
 
