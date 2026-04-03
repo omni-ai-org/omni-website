@@ -34,7 +34,7 @@
     background-image: url('/bkg-noise.webp');
     background-repeat: repeat;
     opacity: 0.12;
-    z-index: -1;
+    z-index: 9999;
     pointer-events: none;
   }
 
